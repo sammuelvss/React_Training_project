@@ -1,0 +1,52 @@
+.lista-filmes{
+    max-width: auto;
+    margin: 14px auto;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.lista-filmes article{
+    width: 100%;
+    border-radius: 5px;
+    background-color: #ffffff;
+    padding: 15px;
+    justify-content: center;
+    align-items: center;
+}
+
+.lista-filmes strong{
+    font-size: 20px;
+    color: #000000;
+    margin-bottom: 14px;
+    text-align: center;
+    display: block;
+}
+
+.lista-filmes img{
+    align-items: center;
+    justify-content: center;
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    max-height: 600px;
+    border-radius: 20px;
+    object-fit: cover;
+    display: block;
+}
+
+.lista-filmes a {
+    display: block;
+    margin: 15px auto 0 auto; /* Centraliza o botão e dá espaço do topo */
+    text-align: center;       /* Centraliza o texto "Acessar" */
+    text-decoration: none;
+    color: #fff;
+    background-color: #746f6f;
+    padding: 10px 0;          /* Aumentei um pouco o preenchimento para ficar mais bonito */
+    border-radius: 15px;
+    font-size: 22px;
+    /* A MÁGICA ESTÁ AQUI: */
+    width: 500px;             /* Mesma largura que você deu para a img */
+    max-width: 100%;          /* Garante que não quebre em telas de celular */
+}
+
