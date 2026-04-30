@@ -5,8 +5,8 @@ header{
     width: 100%;
     height: 60px;
     background-color: #000000;
-    border-bottom-left-radius: 15px;
-    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
 }
 
 .logo{

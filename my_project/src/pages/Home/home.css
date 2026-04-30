@@ -8,13 +8,23 @@
     padding: 0 20px;   /* Dá um respiro nas laterais caso a tela seja menor */
 }
 
+.loading {
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    font-size: 22px;
+}
 
 .lista-filmes article {
     background-color: #ffffff;
     padding: 15px;
-    border-radius: 5px;
+    border-radius: 25px;
     display: flex;
     flex-direction: column; 
+    -webkit-box-shadow: 5px 5px 15px 5px #000000; 
+    box-shadow: 5px 5px 15px 5px #00000041;
 }
 
 
@@ -28,7 +38,7 @@
 
 .lista-filmes img {
     width: 100%;       
-    height: 400px;     
+    height: 500px;     
     object-fit: cover; 
     border-top-right-radius: 15px;
     border-top-left-radius: 15px;
@@ -41,10 +51,36 @@
     margin-top: 0px;  
     text-align: center;
     font-size: 22px;
+    font-family: Galano, Arial, sans-serif;
     text-decoration: none;
     color: #fff;
-    background-color: #3c6ed4;
+    background-image: linear-gradient(to right top, #09377c, #224e91, #3866a5, #4e7fb9, #6698cd);
     padding: 10px 0;
     border-bottom-right-radius: 15px;
     border-bottom-left-radius: 15px;
+    transition: background-image 1s ease;
+    position: relative;
+    z-index: 1;
+}
+.lista-filmes a::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-image: linear-gradient(to right, #143166, #6f8ba3);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    z-index: -1;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+
+}
+.lista-filmes a:hover::before {
+    opacity: 1;
+}
+
+hr {
+    border: none;
+    border-top: 0.5px solid #f0f0f0;
+    margin: 20px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.137);
 }
