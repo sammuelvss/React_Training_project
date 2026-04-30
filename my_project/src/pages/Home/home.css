@@ -1,52 +1,50 @@
-.lista-filmes{
-    max-width: auto;
-    margin: 14px auto;
-    justify-content: center;
-    align-items: center;
-    
+/* O CONTAINER PRINCIPAL DA LISTA */
+.lista-filmes {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Cria exatamente 3 colunas do mesmo tamanho */
+    gap: 25px;         /* Dá um espaço (margem) entre um filme e outro */
+    max-width: 1200px; /* Limita a largura total para a grade não esticar ao infinito numa TV */
+    margin: 20px auto; /* Centraliza a grade na tela do usuário */
+    padding: 0 20px;   /* Dá um respiro nas laterais caso a tela seja menor */
 }
 
-.lista-filmes article{
-    width: 100%;
-    border-radius: 5px;
+
+.lista-filmes article {
     background-color: #ffffff;
     padding: 15px;
-    justify-content: center;
-    align-items: center;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column; 
 }
 
-.lista-filmes strong{
+
+.lista-filmes strong {
     font-size: 20px;
     color: #000000;
     margin-bottom: 14px;
     text-align: center;
-    display: block;
 }
 
-.lista-filmes img{
-    align-items: center;
-    justify-content: center;
-    width: 500px;
-    margin-left: auto;
-    margin-right: auto;
-    max-height: 600px;
-    border-radius: 20px;
-    object-fit: cover;
-    display: block;
+
+.lista-filmes img {
+    width: 100%;       
+    height: 400px;     
+    object-fit: cover; 
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
 }
+
 
 .lista-filmes a {
     display: block;
-    margin: 15px auto 0 auto; /* Centraliza o botão e dá espaço do topo */
-    text-align: center;       /* Centraliza o texto "Acessar" */
+    width: 100%;       
+    margin-top: 0px;  
+    text-align: center;
+    font-size: 22px;
     text-decoration: none;
     color: #fff;
-    background-color: #746f6f;
-    padding: 10px 0;          /* Aumentei um pouco o preenchimento para ficar mais bonito */
-    border-radius: 15px;
-    font-size: 22px;
-    /* A MÁGICA ESTÁ AQUI: */
-    width: 500px;             /* Mesma largura que você deu para a img */
-    max-width: 100%;          /* Garante que não quebre em telas de celular */
+    background-color: #3c6ed4;
+    padding: 10px 0;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
 }
-
