@@ -9,7 +9,6 @@ function Home() {
   const [filmes, setFilmes] = useState([]);
   const [loading, setLoading] = useState(true);
 
-
   useEffect(() => {
     async function loadFilmes() {
       const response = await api.get("movie/popular", {
@@ -21,15 +20,14 @@ function Home() {
       });
 
       //console.log(response.data.results.slice(0, 10));
-      setFilmes(response.data.results.slice(0, 10));
+      setFilmes(response.data.results.slice(0, 12));
       setLoading(false);
     }
 
     loadFilmes();
   }, []);
 
-
-  if(loading) {
+  if (loading) {
     return (
       <div className="loading">
         <h2>Carregando filmes...</h2>
@@ -38,9 +36,7 @@ function Home() {
   }
 
   return (
-    
     <div className="container">
-      
       <div className="lista-filmes">
         {filmes.map((filme) => {
           return (
